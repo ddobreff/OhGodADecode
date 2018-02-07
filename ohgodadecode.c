@@ -47,6 +47,14 @@ int main(int argc, char **argv)
 	
 	ASCIIHexToBinary(buf, argv[1], 96);
 		
+	printf("TCKSRE=%d ", Timings->SEQ_PMG_TIMING.TCKSRE);
+	printf("TCKSRX=%d ", Timings->SEQ_PMG_TIMING.TCKSRX);
+	printf("TCKE_PULSE=%d ", Timings->SEQ_PMG_TIMING.TCKE_PULSE);
+	printf("TCKE=%d ", Timings->SEQ_PMG_TIMING.TCKE);
+	printf("SEQ_IDLE=%d ", Timings->SEQ_PMG_TIMING.SEQ_IDLE);
+	printf("TCKE_PULSE_MSB=%d ", Timings->SEQ_PMG_TIMING.TCKE_PULSE_MSB);
+	printf("SEQ_IDLE_SS=%d\n\n", Timings->SEQ_PMG_TIMING.SEQ_IDLE_SS);
+
 	printf("TRCDW=%d ", Timings->SEQ_RAS_TIMING.TRCDW);
 	printf("TRCDWA=%d ", Timings->SEQ_RAS_TIMING.TRCDWA);
 	printf("TRCDR=%d ", Timings->SEQ_RAS_TIMING.TRCDR);
