@@ -46,7 +46,37 @@ int main(int argc, char **argv)
 	}
 	
 	ASCIIHexToBinary(buf, argv[1], 96);
-		
+
+	printf("DAT_DLY=%d ", Timings->SEQ_WR_CTL_D1.DAT_DLY);
+	printf("DQS_DLY=%d ", Timings->SEQ_WR_CTL_D1.DQS_DLY);
+	printf("DQS_XTR=%d ", Timings->SEQ_WR_CTL_D1.DQS_XTR);
+	printf("DAT_2Y_DLY=%d ", Timings->SEQ_WR_CTL_D1.DAT_2Y_DLY);
+	printf("ADR_2Y_DLY=%d ", Timings->SEQ_WR_CTL_D1.ADR_2Y_DLY);
+    printf("CMD_2Y_DLY=%d\n", Timings->SEQ_WR_CTL_D1.CMD_2Y_DLY);
+	printf("OEN_DLY=%d ", Timings->SEQ_WR_CTL_D1.OEN_DLY);
+	printf("OEN_EXT=%d ", Timings->SEQ_WR_CTL_D1.OEN_EXT);
+	printf("OEN_SEL=%d ", Timings->SEQ_WR_CTL_D1.OEN_SEL);
+	printf("ODT_DLY=%d ", Timings->SEQ_WR_CTL_D1.ODT_DLY);
+    printf("ODT_EXT=%d ", Timings->SEQ_WR_CTL_D1.ODT_EXT);
+	printf("ADR_DLY=%d ", Timings->SEQ_WR_CTL_D1.ADR_DLY);
+	printf("CMD_DLY=%d\n\n", Timings->SEQ_WR_CTL_D1.CMD_DLY);
+
+    printf("DAT_DLY_H_D0=%d ", Timings->SEQ_WR_CTL_2.DAT_DLY_H_D0);
+    printf("DQS_DLY_H_D0=%d ", Timings->SEQ_WR_CTL_2.DQS_DLY_H_D0);
+    printf("OEN_DLY_H_D0=%d ", Timings->SEQ_WR_CTL_2.OEN_DLY_H_D0);
+    printf("DAT_DLY_H_D1=%d ", Timings->SEQ_WR_CTL_2.DAT_DLY_H_D1);
+    printf("DQS_DLY_H_D1=%d ", Timings->SEQ_WR_CTL_2.DQS_DLY_H_D1);
+    printf("OEN_DLY_H_D1=%d ", Timings->SEQ_WR_CTL_2.OEN_DLY_H_D1);
+    printf("WCDR_EN=%d\n\n", Timings->SEQ_WR_CTL_2.WCDR_EN);
+
+	printf("TCKSRE=%d ", Timings->SEQ_PMG_TIMING.TCKSRE);
+	printf("TCKSRX=%d ", Timings->SEQ_PMG_TIMING.TCKSRX);
+	printf("TCKE_PULSE=%d ", Timings->SEQ_PMG_TIMING.TCKE_PULSE);
+	printf("TCKE=%d ", Timings->SEQ_PMG_TIMING.TCKE);
+	printf("SEQ_IDLE=%d ", Timings->SEQ_PMG_TIMING.SEQ_IDLE);
+	printf("TCKE_PULSE_MSB=%d ", Timings->SEQ_PMG_TIMING.TCKE_PULSE_MSB);
+	printf("SEQ_IDLE_SS=%d\n\n", Timings->SEQ_PMG_TIMING.SEQ_IDLE_SS);
+
 	printf("TRCDW=%d ", Timings->SEQ_RAS_TIMING.TRCDW);
 	printf("TRCDWA=%d ", Timings->SEQ_RAS_TIMING.TRCDWA);
 	printf("TRCDR=%d ", Timings->SEQ_RAS_TIMING.TRCDR);
