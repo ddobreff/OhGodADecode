@@ -1,2 +1,2 @@
 # OhGodADecode
-Decodes an entire timing strap for an AMD VBIOS.
+Now it decodes an entire timing strap for an AMD VBIOS :)
