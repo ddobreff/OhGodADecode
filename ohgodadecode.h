@@ -106,6 +106,7 @@ typedef struct _SEQ_MISC_TIMING2_FORMAT
 	uint32_t TWDATATR : 4;
 } SEQ_MISC_TIMING2_FORMAT;
 
+/* Authored by Dobromir Dobrev */
 typedef struct _MC_SEQ_MISC1
 {
         /* MR0 */
@@ -133,6 +134,7 @@ typedef struct _MC_SEQ_MISC1
         uint32_t BA1_3 : 1 ;
 } SEQ_MISC1_FORMAT;
 
+/* Authored by Dobromir Dobrev */
 typedef struct _MC_SEQ_MISC3
 {
         /* MR4 */
@@ -158,6 +160,7 @@ typedef struct _MC_SEQ_MISC3
         uint32_t BA1_3  : 1 ;
 } SEQ_MISC3_FORMAT;
 
+/* Authored by Dobromir Dobrev */
 typedef struct _MC_SEQ_MISC8
 {
         /* MR8 */
