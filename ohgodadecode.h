@@ -106,6 +106,86 @@ typedef struct _SEQ_MISC_TIMING2_FORMAT
 	uint32_t TWDATATR : 4;
 } SEQ_MISC_TIMING2_FORMAT;
 
+typedef struct _MC_SEQ_MISC1
+{
+        /* MR0 */
+        uint32_t WL   : 3 ;
+        uint32_t CL   : 4 ;
+        uint32_t TM   : 1 ;
+        uint32_t WR   : 4 ;
+        uint32_t BA0_0 : 1 ;
+        uint32_t BA0_1 : 1 ;
+        uint32_t BA0_2 : 1 ;
+        uint32_t BA0_3 : 1 ;
+        /* MR1 */
+        uint32_t DS   : 2 ;
+        uint32_t DT   : 2 ;
+        uint32_t ADR  : 2 ;
+        uint32_t CAL  : 1 ;
+        uint32_t PLL  : 1 ;
+        uint32_t RDBI : 1 ;
+        uint32_t WDBI : 1 ;
+        uint32_t ABI  : 1 ;
+        uint32_t RES  : 1 ;
+        uint32_t BA1_0 : 1 ;
+        uint32_t BA1_1 : 1 ;
+        uint32_t BA1_2 : 1 ;
+        uint32_t BA1_3 : 1 ;
+} SEQ_MISC1_FORMAT;
+
+typedef struct _MC_SEQ_MISC3
+{
+        /* MR4 */
+        uint32_t EHP   : 4 ;
+        uint32_t CRCWL : 3 ;
+        uint32_t CRCRL : 2 ;
+        uint32_t RDCRC : 1 ;
+        uint32_t WRCRC : 1 ;
+        uint32_t EHPI  : 1 ;
+        uint32_t BA0_0  : 1 ;
+        uint32_t BA0_1  : 1 ;
+        uint32_t BA0_2  : 1 ;
+        uint32_t BA0_3  : 1 ;
+        /* MR5 */
+        uint32_t LP1   : 1 ;
+        uint32_t LP2   : 1 ;
+        uint32_t LP3   : 1 ;
+        uint32_t PDBW  : 3 ;
+        uint32_t TRAS  : 6 ;
+        uint32_t BA1_0  : 1 ;
+        uint32_t BA1_1  : 1 ;
+        uint32_t BA1_2  : 1 ;
+        uint32_t BA1_3  : 1 ;
+} SEQ_MISC3_FORMAT;
+
+typedef struct _MC_SEQ_MISC8
+{
+        /* MR8 */
+        uint32_t CLEHF : 1 ;
+        uint32_t WREHF : 1 ;
+        uint32_t RFU  : 10 ;
+        uint32_t BA0_0  : 1 ;
+        uint32_t BA0_1  : 1 ;
+        uint32_t BA0_2  : 1 ;
+        uint32_t BA0_3  : 1 ;
+        /* MR7 */
+        uint32_t PLLSB : 1 ;
+        uint32_t PLLFL : 1 ;
+        uint32_t PLLDC : 1 ;
+        uint32_t LFM   : 1 ;
+        uint32_t ASYNC : 1 ;
+        uint32_t DQPA  : 1 ;
+        uint32_t TEMPS : 1 ;
+        uint32_t HVFRD : 1 ;
+        uint32_t VDDR  : 2 ;
+        uint32_t RFU2  : 2 ;
+        uint32_t BA1_0  : 1 ;
+        uint32_t BA1_1  : 1 ;
+        uint32_t BA1_2  : 1 ;
+        uint32_t BA1_3  : 1 ;
+} SEQ_MISC8_FORMAT;
+
+
 typedef struct _ARB_DRAM_TIMING_FORMAT
 {
 	uint32_t ACTRD : 8;
@@ -131,9 +211,9 @@ typedef struct _VBIOS_STRAP_RX
 	SEQ_CAS_TIMING_FORMAT SEQ_CAS_TIMING;
 	SEQ_MISC_TIMING_FORMAT SEQ_MISC_TIMING;
 	SEQ_MISC_TIMING2_FORMAT SEQ_MISC_TIMING2;
-	uint32_t SEQ_MISC1;
-	uint32_t SEQ_MISC3;
-	uint32_t SEQ_MISC8;
+	SEQ_MISC1_FORMAT SEQ_MISC1;
+	SEQ_MISC3_FORMAT SEQ_MISC3;
+	SEQ_MISC8_FORMAT SEQ_MISC8;
 	ARB_DRAM_TIMING_FORMAT ARB_DRAM_TIMING;
 	ARB_DRAM_TIMING2_FORMAT ARB_DRAM_TIMING2;
 } VBIOS_STRAP_RX;
@@ -147,9 +227,9 @@ typedef struct _VBIOS_STRAP_R9
 	SEQ_MISC_TIMING_FORMAT_R9 SEQ_MISC_TIMING;
 	SEQ_MISC_TIMING2_FORMAT SEQ_MISC_TIMING2;
 	SEQ_PMG_TIMING_FORMAT SEQ_PMG_TIMING;
-	uint32_t SEQ_MISC1;
-	uint32_t SEQ_MISC3;
-	uint32_t SEQ_MISC8;
+	SEQ_MISC1_FORMAT SEQ_MISC1;
+	SEQ_MISC3_FORMAT SEQ_MISC3;
+	SEQ_MISC8_FORMAT SEQ_MISC8;
 	ARB_DRAM_TIMING_FORMAT ARB_DRAM_TIMING;
 	ARB_DRAM_TIMING2_FORMAT ARB_DRAM_TIMING2;
 } VBIOS_STRAP_R9;

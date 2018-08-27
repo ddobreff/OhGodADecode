@@ -110,9 +110,11 @@ int main(int argc, char **argv)
 	printf("TCRCWL=%d ", Timings->SEQ_MISC_TIMING2.TCRCWL);
 	printf("TFAW32=%d\n\n", Timings->SEQ_MISC_TIMING2.TFAW32);
 	
-	printf("MC_SEQ_MISC1: 0x%08X\n", Timings->SEQ_MISC1);
-	printf("MC_SEQ_MISC3: 0x%08X\n", Timings->SEQ_MISC3);
-	printf("MC_SEQ_MISC8: 0x%08X\n\n", Timings->SEQ_MISC8);
+	printf("WL=%d ", Timings->SEQ_MISC1.WL);
+	printf("CL=%d ", (5 + (Timings->SEQ_MISC1.CL)) | ( Timings->SEQ_MISC8.CLEHF <<4));
+	printf("WR=%d\n\n", (4 + (Timings->SEQ_MISC1.WR)) | ( Timings->SEQ_MISC8.WREHF <<4));
+
+	printf("TRAS=%d\n\n", Timings->SEQ_MISC3.TRAS);
 	
 	printf("ACTRD=%d ", Timings->ARB_DRAM_TIMING.ACTRD);
 	printf("ACTWR=%d ", Timings->ARB_DRAM_TIMING.ACTWR);
